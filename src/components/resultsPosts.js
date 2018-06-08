@@ -4,13 +4,12 @@ import { connect } from 'react-redux';
 class ResultsPosts extends Component {
     render() {
         return (
-            <ul className="results-posts">
+            <div className="results-posts">
                 <div className="results-posts-wrapper">
-                    <div className="results-posts-posts">
-                        RESULT GO HERE
-                    </div>
+                    <ul className="results-posts-posts">
+                    </ul>
                 </div>
-            </ul>
+            </div>
         )
     }
 }
