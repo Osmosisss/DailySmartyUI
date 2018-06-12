@@ -5,12 +5,12 @@ import { withRouter } from 'react-router-dom';
 
 class SearchBar extends Component {
 
-    handleFormSubmit = function(query) {
+    handleFormSubmit = function({query}) {
         this.props.onSubmit(query);
     }
 
     renderInput(field) {
-            return <input type="text" placeholder="Search DailySmarty" {...field.input} />
+            return <input type="text" placeholder="&#xf002; Search DailySmarty" {...field.input} />
         }
 
     render() {
@@ -18,8 +18,11 @@ class SearchBar extends Component {
         const { handleSubmit } = this.props;
 
         return (
-            <form className="search-bar" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-                <Field name="query" component={this.renderInput} />
+            <form className={`search-bar search-bar-${this.props.page}`} onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                <div className="search-bar-wrapper">
+                    <Field name="query" component={this.renderInput}/>
+                    <p>Press return to search</p>
+                </div>
             </form>
         )
     }
