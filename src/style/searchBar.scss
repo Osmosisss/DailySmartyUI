@@ -2,7 +2,6 @@
     display: grid;
 
     .search-bar-wrapper {
-
         display: grid;
         grid-row-gap: 23px;
         width: 100%;
@@ -35,17 +34,21 @@
     }
 }
 
-.search-bar__home {
-    align-content: start;
+.search-bar-home {
+    align-content: center;
     justify-items: center;
     
     input {
         height: 118px;
         font-size: 40px;
+        @media screen and (max-width: 600px) {
+            font-size: 23px;
+            height: 59px;
+        }
     }
 }
 
-.search-bar__results {
+.search-bar-results {
     align-content: start;
     justify-items: center;
 

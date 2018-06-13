@@ -5,6 +5,7 @@
     display: grid;
 
     margin-top: 52px;
+    grid-row-gap: 44px;
 }
 
 .results-posts {
@@ -24,6 +25,7 @@
     display: grid;
     align-content: space-around;
     grid-row-gap: 22px;
+    
     .result-post-topics > * {
         color: $color-blue-one;
         font-size: 14px;
