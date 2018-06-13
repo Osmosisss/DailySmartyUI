@@ -33,7 +33,7 @@ class Post extends Component {
         if(link.includes('.htm')) {
             link = link.substring(0, link.length - 4);
         }
-        
+
         return link;
     }
 
@@ -48,6 +48,9 @@ class Post extends Component {
             </div>
             )
         })
+        if(links == 0) {
+            return <div className="no-content">No Post Links</div>
+        }
         return links;
     }
 
