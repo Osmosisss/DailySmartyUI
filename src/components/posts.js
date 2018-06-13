@@ -53,7 +53,7 @@ class Post extends Component {
                     <div className="result-post-topics">
                         {this.renderTopics()}
                     </div>
-                    <div classname="result-post-title">
+                    <div className="result-post-title">
                         <a href={this.props.url_for_post}>
                         {this.props.title}
                         </a>
